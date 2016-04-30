@@ -14,16 +14,6 @@
                         </a>
                     </li>
                     {% endif %}
-                    {% if site.twitter_username %}
-                    <li>
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {% endif %}
 
                     <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
                     {% if site.zhihu_username %}
@@ -36,6 +26,7 @@
                         </a>
                     </li>
                     {% endif %}
+
                     {% if site.weibo_username %}
                     <li>
                         <a target="_blank" href="#">
@@ -58,6 +49,7 @@
                         </a>
                     </li>
                     {% endif %}
+
                     {% if site.github_username %}
                     <li>
                         <a target="_blank" href="https://github.com/{{ site.github_username }}">
@@ -72,7 +64,7 @@
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
                     <br/>
-                    Theme &copy <a href="ywb199465.github.io">SkylarkYan</a><br/><br/>
+                    Theme &copy <a href="https://ywb199465.github.io">SkylarkYan</a><br/><br/>
                     <span><a href="#">&#9650; Go Top</a></span>
                 </p>
             </div>

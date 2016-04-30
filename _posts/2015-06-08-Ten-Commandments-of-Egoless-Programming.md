@@ -5,7 +5,7 @@ description: "The Ten Commandments of Egoless Programming"
 modified: 2015-06-08
 ---
 
-<img src="img/post-bg-rwd.jpg">
+<img src="../../../../img/post-bg-rwd.jpg">
 
 <b>1. Understand and accept that you will make mistakes.</b> The point is to find them early, before they make it into production. Fortunately, except for the few of us developing rocket guidance software at JPL, mistakes are rarely fatal in our industry, so we can, and should, learn, laugh, and move on.
 <br><br><b>2. You are not your code.</b> Remember that the entire point of a review is to find problems, and problems will be found. Don't take it personally when one is uncovered.
