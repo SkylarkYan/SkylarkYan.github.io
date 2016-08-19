@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: ywb199465@163.com
 description: "自己玩玩博客，尽量创造点价值"
 keyword: "SkylarkYan"
-url: "https://github.com/ywb199465"              # your host, for absolute URL
+url: "https://github.com/SkylarkYan"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -14,8 +14,8 @@ baseurl: ""                             # for example, '/blog' if your blog host
 RSS: false
 weibo_username:     3508734314/profile?topnav=1&wvr=6&is_all=1
 zhihu_username:     ywb199465
-github_username:    ywb199465
-facebook_username:  SkylarkYan
+github_username:    SkylarkYan
+facebook_username:  people/严文彬/100012181809461
 
 
 
@@ -61,7 +61,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
 ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: ywb199465.github.io
+ga_domain: SkylarkYan.github.io
 
 
 
