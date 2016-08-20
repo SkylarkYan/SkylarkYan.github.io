@@ -81,6 +81,9 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
+        title: "Jekyll模板作者Hux的博客",
+        href: "http://huangxuan.me"
+    },{
         title: "晨宝宝的博客",
         href: "http://icaruslc.github.io"
     },{
