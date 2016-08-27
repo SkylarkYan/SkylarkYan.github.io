@@ -5,6 +5,7 @@ subtitle:   "在写博文中遇到的小问题"
 date:       2016-08-23 18:00:00
 author:     "Skylark Yan"
 header-img: "img/post-bg-js-module.jpg"
+catalog:    true
 tags:
     - 技术
     - Markdown

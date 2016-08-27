@@ -5,6 +5,7 @@ subtitle:   " \"Hello World, Hello Blog\""
 date:       2016-08-23 14:00:00
 author:     "Skylark Yan"
 header-img: "img/in-post/hello.jpg"
+catalog:    true
 tags:
     - 生活
 ---

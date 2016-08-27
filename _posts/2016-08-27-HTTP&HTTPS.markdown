@@ -5,6 +5,7 @@ subtitle:   "Blog中js、css加载错误"
 date:       2016-08-27 2:15:00
 author:     "Skylark Yan"
 header-img: "img/post-bg-rwd.jpg"
+catalog:    true
 tags:
     - 技术
     - http&https

@@ -5,6 +5,7 @@ subtitle:   "Blog搭建指南"
 date:       2016-08-26 2:25:00
 author:     "Skylark Yan"
 header-img: "img/in-post/hello.jpg"
+catalog:    true
 tags:
     - 技术
     - Jekyll
