@@ -28,6 +28,7 @@ tags:
 **现代浏览器都有一个默认的安全设置，`https`页面里只能请求其它`https`的资源，不能使用`http`。每个浏览器里都有开关可以取消这个限制，但是这个开关默认都是关闭的。**
 
 而我遇到问题的原因如下：我的`Blog`没有使用自定义域名，使用的是`GitHub`提供的`username.github.io`的默认域名，而这个域名完整的`URL`应该是`https://username.github.io`，而我`Blog`中的那几个`js`和`css`的标签中的链接是这样的：
+
 ```
 <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -39,6 +40,7 @@ tags:
 ## 问题的解决方案——很简单
 
 知道了问题的原因就好办了，我目前还要继续使用`GitHub`提供的免费域名，因为自己买的域名备案还没完成，`GitHub`的免费域名`username.github.io`强制使用`https`协议；而更改浏览器的默认安全设置也是治标不治本的方法，所以我需要把请求资源的链接也改为`https`，把上述那几个标签中的链接都改成如下就可以了：
+
 ```
 <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 

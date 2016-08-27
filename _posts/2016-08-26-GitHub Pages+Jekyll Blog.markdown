@@ -39,25 +39,29 @@ tags:
 ### 个人用户或组织主页和项目主页
 
 `GitHub` 有两种基本类型的 `GitHub` 主页：
+
 * 个人用户或组织主页
 * 项目主页
 
 它们几乎是相同的，但它们之间有一些重要的区别。 
-| `GitHub` 主页的类型    | 主页默认域名                      | 构建页面的源文件的位置                                       |
-| ------------------- |:--------------------------------:| :---------------------------------------------------------:|
-| 个人用户主页         | `username.github.io`             | `master`分支                                               |
-| 组织主页             | `orgname.github.io`              | `master`分支                                               |
+
+| `GitHub` 主页的类型  | 主页默认域名                      | 构建页面的源文件的位置                                      |
+|:-------------------:|:--------------------------------:|:---------------------------------------------------------:|
+| 个人用户主页         | `username.github.io`             | `master`分支                                              |
+| 组织主页             | `orgname.github.io`              | `master`分支                                              |
 | 个人用户的项目主页    | `username.github.io/projectname` | `master`、`gh-pages`分支，或者`master`分支中的`/docs`文件夹 |
 | 组织账户的项目主页    | `orgname.github.io/projectname`  | `master`、`gh-pages`分支，或者`master`分支中的`/docs`文件夹 |
 
 #### 个人用户或组织主页
 
 对于个人用户主页来说：
+
 * 你必须使用`username.github.io`命名你主页的仓库，比如我的`SkylarkYan.github.io`，并且这样命名的用于存放个人主页的仓库一个账户只能有一个，具有唯一性。
 * 构建和发布你的`GitHub`主页的内容必须放在`master`分支中。
 * 没有使用自定义域名的话，你可以通过`http://username.github.io`来访问你的主页。
 
 对于组织的主页来说，同样的：
+
 * 必须使用`orgname.github.io`命名主页的仓库。
 * 构建和发布的`GitHub`主页的内容必须放在`master`分支中。
 * 没有使用自定义域名可以通过`http://orgname.github.io`来访问主页。
@@ -65,6 +69,7 @@ tags:
 #### 项目主页
 
 与个人用户和组织的主页不同，项目主页和项目本身保存在同一个项目仓库中。个人账户和组织账户都可以创建项目主页。项目主页类似于个人用户或组织主页，但也有一些差别:
+
 * 你可以从`master`或`gh-pages`分支构建和发布项目主页，或者你也可以用`master`分支中的`/docs`文件夹。
 * 如果没有使用自定义域名,项目主页会在在用户主页的子路径：`username.github.io/projectname`，使用自定义域名则随域名变动。
 * 个人账户的项目主页`URL`为`http://username.github.io/projectname`，而一个组织的项目主页`URL`为`http://orgname.github.io/projectname`。
@@ -81,8 +86,10 @@ tags:
 
 与其他的模板引擎一样，标记是模板引擎解析的关键，`liquid`设计了如下两种标记：
 
-* `{{ }}`：此标记表示的是将其中的变量转化成文本
-* `{% %}`：此标记用于包含控制流关键字，比如：`{% if %}`、`{% for x in xx %}`
+> PS：在这之后所有liquid引擎中的{ {、} }、{ %、% }标识，中间都是没有空格的，只是为了避免这些标识被解析，才加了空格，等找到解决方案之后我会改回去的，大家注意不要搞错了。
+
+* `{ { … } }`：此标记表示的是将其中的变量转化成文本
+* `{ % … % }`：此标记用于包含控制流关键字，比如：`{ % if % }`、`{ % for x in xx % }` 
 
 显而易见的是，有了这种标记的支持，再加上`Jekyll`内建的对象，构建个人`Blog`就方便不少了。关于`Jekyll`还有在`GitHub Pages`中使用`Jekyll`的相关内容可以去[GitHub官网的帮助信息](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/)看看。
 
@@ -96,6 +103,8 @@ tags:
 
 ![](http://i.imgur.com/wI9Dpgn.png)
 
+PS：图中示例不完全正确，我的`username`是`skylarkyan`，应该建立名为`skylarkyan.github.io`仓库，但是这个仓库是唯一的，已经存在了，所以不能创建，改了名字只起示例作用。
+
 ### 搭建本地环境
 
 第一步，搭建本地测试环境，这一步虽然理论上不是必须的，但是我觉得基本就是必须要做的。因为之前我搭建`Blog`的时候刚开始本地环境没有搭建好，就想先跳过这一块，结果就是每改动一点内容我都需要`push`到`GitHub`上才能看到效果，整体效率就变的特别低，还是不要作死了= = ，乖乖把本地环境搭建好吧，毕竟也挺简单的。
@@ -103,12 +112,14 @@ tags:
 #### Ruby和RubyDevKit的安装
 
 前面说过`Jekyll`是基于`Ruby`开发的，因此想要在本地搭建一个测试环境需要`Ruby`的开发和运行环境。附上[Ruby的下载地址](http://rubyinstaller.org/downloads/)。`Windows`还是无脑安装，不断下一步下一步，不过记得安装过程中勾选添加`Ruby`到`PATH`系统环境变量，方便后面操作。安装完成后打开`cmd`输入`ruby --version`命令测试，输出`Ruby`版本号即安装成功。
+
 ```
 $ ruby --version
 ruby 2.2.4p230 (2015-12-16 revision 53155) [x64-mingw32]
 ```
 
 还有`DevKit`，也从上面的链接下载，注意版本要与`Ruby`版本一致。下载下来的文件可以用`7-zip`解压，直接双击它会自解压到你选择的目录，解压完成后用`cmd`或`Git Bash`进入到刚才解压的目录下，运行下面命令：
+
 ```
 $ ruby dk.rb init
 $ ruby dk.rb install
@@ -118,45 +129,51 @@ $ ruby dk.rb install
 
 #### Bundle安装
 
-1. 打开`cmd`或者`Git Bash`，输入命令`gem install bundler`并执行。
+1.打开`cmd`或者`Git Bash`，输入命令`gem install bundler`并执行。
 
-2. 在根目录下创建一个名为`Gemfile`的文件，注意没有后缀名，用文本编辑器如`Sublime Text`添加下面内容到`Gemfile`中：
-    ```
-    source 'https://rubygems.org'
-    gem 'github-pages', group: :jekyll_plugins
-    ```
-    上面的链接是在国外的，得益于天朝的网络管理制度，即使翻墙了速度也不太理想。当然你不嫌慢多等会也可以用上面这个链接，反正我当时等了二十多分钟才完成（一脸黑线）。可以换成国内的[镜像链接](https://ruby.taobao.org/)，把`Gemfile`的内容改为：
-    ```
-    source 'https://ruby.taobao.org/'
-    gem 'github-pages', group: :jekyll_plugins
-    ```
+2.在根目录下创建一个名为`Gemfile`的文件，注意没有后缀名，用文本编辑器如`Sublime Text`添加下面内容到`Gemfile`中：
 
-3. 输入命令`bundle install`并执行。命令会根据当前目录下的`Gemfile`，安装需要的所有组件。并且以后可以使用命令`bundle update`随时更新环境，保证正常使用。
-    ```
-    $ bundle install
-    Fetching gem metadata from https://rubygems.org/............
-    Fetching version metadata from https://rubygems.org/...
-    Fetching dependency metadata from https://rubygems.org/..
-    Resolving dependencies...
-    ```
+```
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
+```
 
-4. 输入命令`bundle exec jekyll serve`并执行，显示类似如下信息：
-    ```
-    $ bundle exec jekyll serve
-    Configuration file: C:/git/SkylarkYan.github.io/_config.yml
-                Source: C:/git/SkylarkYan.github.io
-        Destination: C:/git/SkylarkYan.github.io/_site
-    Incremental build: disabled. Enable with --incremental
-        Generating...
-                        done in 0.368 seconds.
-    Please add the following to your Gemfile to avoid polling for changes:
-        gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-    Auto-regeneration: enabled for 'C:/git/SkylarkYan.github.io'
-    Configuration file: C:/git/SkylarkYan.github.io/_config.yml
-        Server address: http://127.0.0.1:4000/
-    Server running... press ctrl-c to stop.
-    ```
-    然后访问 `http://127.0.0.1:4000/` 就可以看看本地测试环境的效果了，当然如果你的仓库为空肯定是404了，要在后面的操作完成后才会有页面显示。
+上面的链接是在国外的，得益于天朝的网络管理制度，即使翻墙了速度也不太理想。当然你不嫌慢多等会也可以用上面这个链接，反正我当时等了二十多分钟才完成（一脸黑线）。可以换成国内的[镜像链接](https://ruby.taobao.org/)，把`Gemfile`的内容改为：
+
+```
+source 'https://ruby.taobao.org/'
+gem 'github-pages', group: :jekyll_plugins
+```
+
+3.输入命令`bundle install`并执行。命令会根据当前目录下的`Gemfile`，安装需要的所有组件。并且以后可以使用命令`bundle update`随时更新环境，保证正常使用。
+
+```
+$ bundle install
+Fetching gem metadata from https://rubygems.org/............
+Fetching version metadata from https://rubygems.org/...
+Fetching dependency metadata from https://rubygems.org/..
+Resolving dependencies...
+```
+
+4.输入命令`bundle exec jekyll serve`并执行，显示类似如下信息：
+
+```
+$ bundle exec jekyll serve
+Configuration file: C:/git/SkylarkYan.github.io/_config.yml
+        Source: C:/git/SkylarkYan.github.io
+    Destination: C:/git/SkylarkYan.github.io/_site
+Incremental build: disabled. Enable with --incremental
+    Generating...
+                done in 0.368 seconds.
+Please add the following to your Gemfile to avoid polling for changes:
+    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+Auto-regeneration: enabled for 'C:/git/SkylarkYan.github.io'
+Configuration file: C:/git/SkylarkYan.github.io/_config.yml
+    Server address: http://127.0.0.1:4000/
+Server running... press ctrl-c to stop.
+```
+
+然后访问 `http://127.0.0.1:4000/` 就可以看看本地测试环境的效果了，当然如果你的仓库为空肯定是404了，要在后面的操作完成后才会有页面显示。
 
 ### 在本地仓库编写Blog
 
@@ -187,7 +204,9 @@ $ ruby dk.rb install
   ├- index.html    
   └- _config.yml 
 ```
+
 各个文件及文件夹的解释：
+
 * `_includes/` ：该目录下的文件可以用来作为公共的内容被其他文章引用。
 * `_layouts/` ：该目录下的文件将作为主要的模板文件。
 * `_posts/` ：博客文章应放在这个目录下，但需要注意，文章的文件名必须是`YYYY-MM-DD-Title.markdown`
@@ -203,6 +222,7 @@ $ ruby dk.rb install
 对于基于静态页面的网站，你显然不希望每篇文章都要写`html`、`head`等与文章本身无关的重复的东西，那么容易想到的是将这些东西作为模板提取出来，以便复用，这也是`Jekyll`的作用。
 
 `_layouts/`目录下的文件可以作为这样的模板。现在我们在`_layouts/`文件夹中创建一个模板文件 `default.html`：
+
 ```
 <html>
    <head>
@@ -210,14 +230,15 @@ $ ruby dk.rb install
        <title>My blog</title>
    </head>
    <body>
-   {{ content }}
+   { { content } }
    </body>
 <html>
 ```
 
-`default.html`包含了每个`html`都需要的一些标记，以及一个个`liquid`标记。`{{ … }}`是`liquid`中用来表示“内容”的标记，其中的对象在解析时会被替换成文件到页面中。`content`：表示在这里的地方用子页面的内容替换。
+`default.html`包含了每个`html`都需要的一些标记，以及一个个`liquid`标记。`{ { … } }`是`liquid`中用来表示“内容”的标记，其中的对象在解析时会被替换成文件到页面中。`content`：表示在这里的地方用子页面的内容替换。
 
 现在我们来实现一个简单的主页，在仓库根目录下，创建一个`index.html`：
+
 ```
 ---
 layout: default
@@ -228,13 +249,14 @@ layout: default
 
 除了普通的`html`标记外，开头这一段称为[`YAML`格式](https://github.com/jekyll/jekyll/wiki/YAML-Front-Matter)，以一行`---`开头，一行`---`结尾，在虚线的中间以`key-value`的形式对一些全局变量进行赋值。
 
-`layout`变量的值表示该文章应当使用`_layouts/default`这个文件作为父模板，并将`index.html`中的内容替换父模板中的`{{ content }}`标记。
+`layout`变量的值表示该文章应当使用`_layouts/default`这个文件作为父模板，并将`index.html`中的内容替换父模板中的`{ { content } }`标记。
 
 在根目录中启动`jekyll serve`（在`Git Bash`中执行`bundle exec jekyll serve`命令），并访问 `http://127.0.0.1:4000/index.html` ，你将看到如下页面：
 
 ![](http://www.pchou.info/assets/img/build-github-blog-page-05-img0.png)
 
-该页面的`html`源码如下，可以看到，`index.html`中的内容替换了`default.html`中的`{{ content }}`
+该页面的`html`源码如下，可以看到，`index.html`中的内容替换了`default.html`中的`{ { content } }`
+
 ```
 <html>
   <head>
@@ -263,9 +285,9 @@ PS：请确保你的文件都是`UTF-8 without BOM`的编码。
 layout: default
 title: my first post
 ---
-<h1>{{ page.title }}</h1>
+<h1>{ { page.title } }</h1>
 <p>This is my first post.Click the link below to go back to index:</p>
-<a href="{{ site.baseurl }}/index.html">Go back</a>
+<a href="{ { site.baseurl } }/index.html">Go back</a>
 ```
 
 修改`index.html`：
@@ -278,9 +300,9 @@ layout: default
 <p>This is the index page</p>
 <p>My post list:</p>
 <ul>
-   {% for post in site.posts %}
-       <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-   {% endfor %}
+   { % for post in site.posts % }
+       <li><a href="{ { site.baseurl } } { { post.url } }">{ { post.title } }</a></li>
+   { % endfor % }
 </ul>
 ```
 
@@ -297,32 +319,34 @@ layout: default
 
 这些对象被称为“模板数据API”，更多`API`文档请[参见这里](http://jekyllbootstrap.com/api/template-data-api.html)。
 
-再提一下`liquid`，`liquid`是`Jekyll`底层用于解析的引擎，我们用到的`{{ … }}`亦或是`{% … %}`标记其实是靠`liquid`去解析的。下面简单介绍下`liquid`的使用。
+再提一下`liquid`，`liquid`是`Jekyll`底层用于解析的引擎，我们用到的`{ { … } }`亦或是`{ % … % }`标记其实是靠`liquid`去解析的。下面简单介绍下`liquid`的使用。
 
 `liquid`包含两种标记，理解他们的机理是十分重要的：
 
-* `{{ … }}`：输入标记，其中的内容将被文本输出
-* `{% … %}`：操作标记，通常包含控制流代码，例如：
+* `{ { … } }`：输入标记，其中的内容将被文本输出
+* `{ % … % }`：操作标记，通常包含控制流代码，例如：
     ```
-    {% if user.age > 18 %}
+    { % if user.age > 18 % }
         Login here
-    {% else %}
+    { % else % }
         Sorry, you are too young
-    {% endif %}
+    { % endif % }
 
-    {% for item in array %}
-        {{ item }}
-    {% endfor %}
+    { % for item in array % }
+        { { item } }
+    { % endfor % }
     ```
 
 另外`liquid`还包含一种叫`filter`的机制。这是种对输出标记的扩展，通过它可以对输出标记中的内容进行更细致的处理，例如：
+
 ```
-Hello {{ 'tobi' | upcase }}
-Hello tobi has {{ 'tobi' | size }} letters!
-Hello {{ 'now' | date: "%Y %h" }}
+Hello { { 'tobi' | upcase } }
+Hello tobi has { { 'tobi' | size } } letters!
+Hello { { 'now' | date: "%Y %h" } }
 ```
 
 对应的：
+
 * 返回字符串大写的结果：TOBI
 * 返回字符串的长度：4
 * 将当前时间格式化输出
@@ -367,6 +391,7 @@ $ git push origin master
 ### 分类和标签功能
 
 分类和标签功能是`Jekyll`的`yaml-format`的内置功能，在每篇文章上方可以设置：这里需要注意的是如果多个分类或者`tag`的话，分开注明即可。分类可以任意添加，`Jekyll`在解析网站的时候会统计所有的分类，并放到`site.tags`中；换句话说，不能脱离文章而设置分类。比如这篇文章的头就有如下信息：
+
 ```
 ---
 layout:     post
@@ -384,11 +409,12 @@ tags:
 ```
 
 其中的`tag`就有四个，即四个标签分类，我的`Blog`中列出标签分类的代码如下，也是很简单明了的：
+
 ```
 <div id='tag_cloud' class="tags">
-    {% for tag in site.tags %}
-    <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
-    {% endfor %}
+    { % for tag in site.tags % }
+    <a href="#{ { tag[0] } }" title="{ { tag[0] } }" rel="{ { tag[1].size } }">{ { tag[0] } }</a>
+    { % endfor % }
 </div>
 ```
 
