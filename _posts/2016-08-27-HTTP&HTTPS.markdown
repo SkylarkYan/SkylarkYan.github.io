@@ -20,7 +20,7 @@ tags:
 
 刚开始看到这个一脸懵逼……只能从那个`Status`为`(blocked:mixed)`下手了，然后就开始了百度……
 
-![](http://i.imgur.com/UP39kZ1.jpg)
+![](https://i.imgur.com/UP39kZ1.jpg)
 
 ## 问题的原因——HTTP与HTTPS
 

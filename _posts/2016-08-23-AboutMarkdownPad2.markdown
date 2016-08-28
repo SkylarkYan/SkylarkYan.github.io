@@ -20,11 +20,11 @@ tags:
 
 在下载安装了[Markdown Pad 2](http://markdownpad.com/)之后，打开尝试用Markdown语法写了几句话，发现预览有问题，在预览窗口显示如下：
 
-![](http://i.imgur.com/eeDfgw2.png)
+![](https://i.imgur.com/eeDfgw2.png)
 
 同时根据它弹出的窗口提示信息跳转到了官网的[帮助信息](http://markdownpad.com/faq.html#livepreview-directx)：
 
-![](http://i.imgur.com/6yFpd6I.png)
+![](https://i.imgur.com/6yFpd6I.png)
 
 得，需要我装这个[Awesomium 1.6.6 SDK](http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe) ,下载发现竟然有110M ，也是醉了。下载完安装完成后，显示预览正常，问题解决。
 
