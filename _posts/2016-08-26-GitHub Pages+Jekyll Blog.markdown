@@ -102,9 +102,7 @@ tags:
 
 这部分应该不用细说，只要你熟悉了`GitHub`的基础知识和基本操作，这一步应该没什么问题。我是用个人主页搭建`Blog`的，建立一个名为`username.github.io`的仓库，把相关文件放在`master`分支即可。若用项目主页，则按照之前项目主页的说明，把构建`Blog`的相关文件放在项目仓库对应的位置即可。
 
-![](http://i.imgur.com/wI9Dpgn.png)
-
-PS：图中示例不完全正确，我的`username`是`skylarkyan`，应该建立名为`skylarkyan.github.io`仓库，但是这个仓库是唯一的，已经存在了，所以不能创建，改了名字只起示例作用。
+![](http://i.imgur.com/jVfTElT.png)
 
 ### 搭建本地环境
 
