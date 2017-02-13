@@ -7,9 +7,8 @@ author:     "Skylark Yan"
 header-img: "img/post-bg-js-module.jpg"
 catalog:    true
 tags:
-    - 技术
-    - Markdown
-    - Blog
+    - 技术问题相关
+    - 实用小工具
 ---
 
 

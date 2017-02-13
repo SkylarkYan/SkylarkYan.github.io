@@ -8,6 +8,7 @@ header-img: "img/in-post/hello.jpg"
 catalog:    true
 tags:
     - 生活
+    - Blog
 ---
 
 

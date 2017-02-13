@@ -7,9 +7,7 @@ author:     "Skylark Yan"
 header-img: "img/post-bg-rwd.jpg"
 catalog:    true
 tags:
-    - 技术
-    - http&https
-    - Blog
+    - 技术问题相关
 ---
 
 ## 问题一开始的情况——js和css失效

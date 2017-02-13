@@ -7,10 +7,7 @@ author:     "Skylark Yan"
 header-img: "img/in-post/hello.jpg"
 catalog:    true
 tags:
-    - 技术
-    - Jekyll
-    - GitHub
-    - GitHub Pages
+    - 技术问题相关
     - Blog
 ---
 
